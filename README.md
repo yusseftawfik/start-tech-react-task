@@ -20,8 +20,6 @@ I used
 `react` in `typescript` with
 `tailwindcss` framework for styling.
 `118Next` for localization and multi language website.
-`eslint` & `prettier` for coding guidelines standards.
-also I used `framer-motion` for the animations.
 
 ## Folder Structure
 
