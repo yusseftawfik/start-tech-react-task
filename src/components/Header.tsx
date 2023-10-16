@@ -39,7 +39,7 @@ const Header: FC = () => {
             </h2>
             <h2
               className="text-center text-3xl font-semibold leading-tight
-                         tracking-tight text-black lg:text-start"
+                        tracking-tight text-black lg:text-start"
             >
               احصل على أفضل العروض في
               <span className="!bg-gradient-to-r !from-main !to-yellow !bg-clip-text !text-transparent">
@@ -69,8 +69,7 @@ const Header: FC = () => {
                 alt={i.alt}
                 width={150}
                 height={125}
-                className="mx-auto h-auto w-full
-                                    object-cover object-top hover:scale-[1.01] hover:opacity-90 hover:drop-shadow-sm"
+                className="mx-auto h-auto w-full object-cover object-top hover:scale-[1.01] hover:opacity-90 hover:drop-shadow-sm"
               />
             </Link>
           ))}

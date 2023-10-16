@@ -1,6 +1,11 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+
 import LanguageDetector from "i18next-browser-languagedetector";
+
+const fallbackLng = ["en"];
+const availableLanguages = ["en", "ar"];
+const savedLanguage = localStorage.getItem("i18nextLng");
 
 i18n
   // detect user language
@@ -11,17 +16,29 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    debug: true,
-    fallbackLng: "en",
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
+    lng: savedLanguage || "en",
+    // resources,
+    backend: {
+      /* translation file path */
+      loadPath: "/i18n/{{ns}}/{{lng}}.json",
     },
-    resources: {
-      en: {
-        translation: {
-          // here we will place our translations...
-        },
-      },
+    fallbackLng,
+    detection: {
+      checkWhitelist: true,
+      order: ["localStorage", "htmlTag", "cookie"],
+      caches: ["localStorage", "cookie"],
+    },
+    debug: false,
+    whitelist: availableLanguages,
+    ns: ["translations"],
+    defaultNS: "translations",
+    keySeparator: false,
+    interpolation: {
+      escapeValue: false,
+      formatSeparator: ",",
+    },
+    react: {
+      wait: true,
     },
   });
 
