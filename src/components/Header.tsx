@@ -76,7 +76,7 @@ const Header: FC = () => {
         </div>
       </div>
       <div className="hidden w-1/2 items-center justify-end lg:flex">
-        <div className="relative h-[30rem] w-[35rem]">
+        <div className="relative h-[25rem] w-[30rem]">
           <img
             src={`/images/banner.png`}
             alt={`Premitto App`}

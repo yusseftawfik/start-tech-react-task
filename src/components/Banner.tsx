@@ -52,7 +52,7 @@ const Banner: FC = () => {
               i18n.language === `en`
                 ? `left-auto right-16`
                 : `left-16 right-auto`
-            } absolute -bottom-5 hidden h-[28rem] w-[35rem] 2xl:block`}
+            } absolute -bottom-7 hidden h-[26rem] w-[33rem] 2xl:block`}
           >
             <img
               className="absolute object-contain"

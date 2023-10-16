@@ -44,7 +44,7 @@ const Discover: FC = () => {
           ))}
         </div>
         <div className="hidden w-full items-center justify-end md:w-1/2 lg:flex">
-          <div className="relative h-[35rem] w-[20rem]">
+          <div className="relative h-[30rem] w-[15rem]">
             <img
               src={`/images/mockup.png`}
               alt={`Premitto App`}
