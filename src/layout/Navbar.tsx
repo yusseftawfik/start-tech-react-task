@@ -16,7 +16,7 @@ const PublicNavbar: FC = () => {
   //----------------------------------------------------------------------------------------------------------------
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language === `ar` ? `en` : `ar`);
-    document.body.dir = i18n.language === `ar` ? `ltr` : `rtl`;
+    document.body.dir = i18n.dir();
     document.body.lang = i18n.language === `ar` ? `ar` : `en`;
     localStorage.setItem(`lang`, i18n.language || `en`);
     setIsMenuOpen(false);
